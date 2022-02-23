@@ -1,4 +1,4 @@
-package ExercisesNtuEduSg;
+package ExercisesNtuDecisionAndLoop;
 
 public class SumAverageRunningInt {
     public static void main(String[] args) {
