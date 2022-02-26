@@ -3,34 +3,54 @@ package Chapter_6;
 
 public class Queue {
 
-    private int numbersArray[];// this array holds the queue
+    private char q[];// this array holds the queue
     private int putloc, getloc;// the put and get indices
 
     public Queue(int size) {
-        this.numbersArray = new int[size];// allocate memory for queue
-        this.putloc = this.getloc = 0;
+        q = new char[size];// allocate memory for queue
+        putloc = getloc = 0;
     }
 
-    // put an integer into the queue
-    public void put(int number) {
+    // Construct a Queue from a Queue
+    public Queue(Queue ob) {
+        putloc = ob.putloc;
+        getloc = ob.getloc;
+        q = new char[ob.q.length];
 
-        if (this.putloc == numbersArray.length) {
+        // copy elements
+        for (int i = getloc; i < putloc; i++) {
+            q[i] = ob.q[i];
+        }
+    }
+
+    // Construct a Queue with initial values.
+    Queue(char a[]) {
+        putloc = 0;
+        getloc = 0;
+        q = new char[a.length];
+        for (int i = 0; i < a.length; i++) {
+            put(a[i]);
+        }
+    }
+
+    public void put(char ch) {
+        if (putloc == q.length) {
             System.out.println(" - Queue is full.");
             return;
         }
 
-        numbersArray[this.putloc++] = number;
+        q[putloc++] = ch;
     }
 
-    // get an integer from the queue
-    public int get() {
-
-        if (this.getloc == this.putloc) {
+    // Get a character from the queue
+    public char get() {
+        if (getloc == putloc) {
             System.out.println(" - Queue is empty.");
-            return -1;
+            return (char) 0;
         }
 
-        return numbersArray[this.getloc++];
+        return q[getloc++];
     }
 }
+
 
