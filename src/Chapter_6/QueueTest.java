@@ -6,7 +6,7 @@ public class QueueTest {
         Queue q1 = new Queue(10);
 
         char name[] = {'T', 'o', 'm'};
-        // construct quwuw from array
+        // construct queue from array
         Queue q2 = new Queue(name);
 
         char ch;
@@ -35,6 +35,9 @@ public class QueueTest {
             ch = q2.get();
             System.out.print(ch);
         }
+
+        System.out.println("q2.putloc= " + q2.putloc);
+        System.out.println("q2.getloc= " + q2.getloc);
 
         System.out.println("\n");
 

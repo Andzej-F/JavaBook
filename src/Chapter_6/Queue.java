@@ -3,8 +3,8 @@ package Chapter_6;
 
 public class Queue {
 
-    private char q[];// this array holds the queue
-    private int putloc, getloc;// the put and get indices
+    public char q[];// this array holds the queue
+    public int putloc, getloc;// the put and get indices
 
     public Queue(int size) {
         q = new char[size];// allocate memory for queue
