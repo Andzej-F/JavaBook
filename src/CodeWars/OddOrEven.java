@@ -1,4 +1,4 @@
-package ArrayExercisesCodeWars;
+package CodeWars;
 
 public class OddOrEven {
     public static void main(String[] args) {

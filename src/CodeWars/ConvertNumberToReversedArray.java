@@ -1,4 +1,4 @@
-package ArrayExercisesCodeWars;
+package CodeWars;
 
 import java.util.Arrays;
 

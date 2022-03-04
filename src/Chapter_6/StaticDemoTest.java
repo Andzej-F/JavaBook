@@ -18,5 +18,12 @@ public class StaticDemoTest {
         System.out.println("ob1.sum(): " + ob1.sum());
         System.out.println("ob2.sum(): " + ob2.sum());
         System.out.println();
+
+        StaticDemo.y = 100;
+        System.out.println("Change StaticDemo.y to 100");
+
+        System.out.println("ob1.sum(): " + ob1.sum());
+        System.out.println("ob2.sum(): " + ob2.sum());
+        System.out.println();
     }
 }
